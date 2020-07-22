@@ -10,14 +10,31 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:emotion-css-fold.helloWorld"
+        "onCommand:emotion-css-fold.foldAll",
+        "onCommand:emotion-css-fold.unfoldAll"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "emotion-css-fold.helloWorld",
-				"title": "Hello World"
+				"command": "emotion-css-fold.foldAll",
+				"title": "CSS Tag: Fold All"
+			},
+			{
+				"command": "emotion-css-fold.unfoldAll",
+				"title": "CSS Tag: Unfold All"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "emotion-css-fold.foldAll",
+				"key": "cmd+k cmd+a",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "emotion-css-fold.unfoldAll",
+				"key": "cmd+k cmd+z",
+				"when": "editorTextFocus"
 			}
 		]
 	},
