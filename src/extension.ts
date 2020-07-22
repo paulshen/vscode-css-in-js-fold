@@ -3,7 +3,7 @@ import { findCssTemplates } from "./utils";
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
-    vscode.commands.registerCommand("emotion-css-fold.foldAll", () => {
+    vscode.commands.registerCommand("css-template-fold.foldAll", () => {
       if (!vscode.window.activeTextEditor) {
         return;
       }
@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
     })
   );
   context.subscriptions.push(
-    vscode.commands.registerCommand("emotion-css-fold.unfoldAll", () => {
+    vscode.commands.registerCommand("css-template-fold.unfoldAll", () => {
       if (!vscode.window.activeTextEditor) {
         return;
       }

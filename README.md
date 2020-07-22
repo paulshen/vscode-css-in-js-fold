@@ -1,6 +1,6 @@
-# emotion-css-fold README
+# css-template-fold README
 
-This is the README for your extension "emotion-css-fold". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "css-template-fold". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
