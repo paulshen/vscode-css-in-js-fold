@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { findCssInJs } from "./utils";
+import { findCssInJsLineNumbers } from "./utils";
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
@@ -8,12 +8,12 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
       const { document } = vscode.window.activeTextEditor;
-      const cssTemplateLines = findCssInJs(document);
+      const cssInJsLineNumbers = findCssInJsLineNumbers(document);
 
-      if (cssTemplateLines.length > 0) {
+      if (cssInJsLineNumbers.length > 0) {
         vscode.commands.executeCommand("editor.fold", {
           levels: 1,
-          selectionLines: cssTemplateLines,
+          selectionLines: cssInJsLineNumbers,
         });
       }
     })
@@ -24,12 +24,12 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
       const { document } = vscode.window.activeTextEditor;
-      const cssTemplateLines = findCssInJs(document);
+      const cssInJsLineNumbers = findCssInJsLineNumbers(document);
 
-      if (cssTemplateLines.length > 0) {
+      if (cssInJsLineNumbers.length > 0) {
         vscode.commands.executeCommand("editor.unfold", {
           levels: 1,
-          selectionLines: cssTemplateLines,
+          selectionLines: cssInJsLineNumbers,
         });
       }
     })

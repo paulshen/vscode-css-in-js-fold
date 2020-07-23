@@ -9,7 +9,9 @@ const SUPPORTED_LANGUAGES = [
   "javascriptreact",
 ];
 
-export function findCssInJs(document: vscode.TextDocument): number[] {
+export function findCssInJsLineNumbers(
+  document: vscode.TextDocument
+): number[] {
   if (!SUPPORTED_LANGUAGES.includes(document.languageId)) {
     return [];
   }
