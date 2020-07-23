@@ -1,13 +1,20 @@
 {
   "name": "css-in-js-fold",
-  "displayName": "css-in-js-fold",
-  "description": "",
+  "displayName": "CSS-in-JS Fold",
+  "publisher": "paulshen",
+  "description": "Quickly fold and unfold CSS-in-JS blocks",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.47.0"
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "styled-components",
+    "emotion",
+    "css-in-js",
+    "fold"
   ],
   "activationEvents": [
     "onCommand:css-in-js-fold.foldAll",
