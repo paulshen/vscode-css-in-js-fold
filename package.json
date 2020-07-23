@@ -3,7 +3,7 @@
   "displayName": "CSS-in-JS Fold",
   "publisher": "paulshen",
   "description": "Quickly fold and unfold CSS-in-JS blocks",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.47.0"
   },
@@ -21,9 +21,9 @@
     "onCommand:css-in-js-fold.unfoldAll"
   ],
   "repository": {
-		"url": "https://github.com/paulshen/vscode-css-in-js-fold",
-		"type": "git"
-	},
+    "url": "https://github.com/paulshen/vscode-css-in-js-fold",
+    "type": "git"
+  },
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
