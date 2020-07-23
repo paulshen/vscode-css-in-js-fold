@@ -1,6 +1,6 @@
 {
-  "name": "css-template-fold",
-  "displayName": "css-template-fold",
+  "name": "css-in-js-fold",
+  "displayName": "css-in-js-fold",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -10,29 +10,29 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:css-template-fold.foldAll",
-    "onCommand:css-template-fold.unfoldAll"
+    "onCommand:css-in-js-fold.foldAll",
+    "onCommand:css-in-js-fold.unfoldAll"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "css-template-fold.foldAll",
-        "title": "CSS Template: Fold All"
+        "command": "css-in-js-fold.foldAll",
+        "title": "CSS in JS: Fold All"
       },
       {
-        "command": "css-template-fold.unfoldAll",
-        "title": "CSS Template: Unfold All"
+        "command": "css-in-js-fold.unfoldAll",
+        "title": "CSS in JS: Unfold All"
       }
     ],
     "keybindings": [
       {
-        "command": "css-template-fold.foldAll",
+        "command": "css-in-js-fold.foldAll",
         "key": "cmd+k cmd+a",
         "when": "editorTextFocus"
       },
       {
-        "command": "css-template-fold.unfoldAll",
+        "command": "css-in-js-fold.unfoldAll",
         "key": "cmd+k cmd+z",
         "when": "editorTextFocus"
       }

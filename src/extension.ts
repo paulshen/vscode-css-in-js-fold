@@ -1,14 +1,14 @@
 import * as vscode from "vscode";
-import { findCssTemplates } from "./utils";
+import { findCssInJs } from "./utils";
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
-    vscode.commands.registerCommand("css-template-fold.foldAll", () => {
+    vscode.commands.registerCommand("css-in-js-fold.foldAll", () => {
       if (!vscode.window.activeTextEditor) {
         return;
       }
       const { document } = vscode.window.activeTextEditor;
-      const cssTemplateLines = findCssTemplates(document);
+      const cssTemplateLines = findCssInJs(document);
 
       if (cssTemplateLines.length > 0) {
         vscode.commands.executeCommand("editor.fold", {
@@ -19,12 +19,12 @@ export function activate(context: vscode.ExtensionContext) {
     })
   );
   context.subscriptions.push(
-    vscode.commands.registerCommand("css-template-fold.unfoldAll", () => {
+    vscode.commands.registerCommand("css-in-js-fold.unfoldAll", () => {
       if (!vscode.window.activeTextEditor) {
         return;
       }
       const { document } = vscode.window.activeTextEditor;
-      const cssTemplateLines = findCssTemplates(document);
+      const cssTemplateLines = findCssInJs(document);
 
       if (cssTemplateLines.length > 0) {
         vscode.commands.executeCommand("editor.unfold", {

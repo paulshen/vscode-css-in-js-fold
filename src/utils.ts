@@ -1,9 +1,6 @@
 import * as vscode from "vscode";
 
-const CSS_TEMPLATE_REGEX = new RegExp(
-  "\\b(css|styled(\\..+?|\\(.+?\\)))`",
-  "g"
-);
+const CSS_IN_JS_REGEX = new RegExp("\\b(css|styled(\\..+?|\\(.+?\\)))`", "g");
 
 const SUPPORTED_LANGUAGES = [
   "typescriptreact",
@@ -12,7 +9,7 @@ const SUPPORTED_LANGUAGES = [
   "javascriptreact",
 ];
 
-export function findCssTemplates(document: vscode.TextDocument): number[] {
+export function findCssInJs(document: vscode.TextDocument): number[] {
   if (!SUPPORTED_LANGUAGES.includes(document.languageId)) {
     return [];
   }
@@ -20,7 +17,7 @@ export function findCssTemplates(document: vscode.TextDocument): number[] {
   const text = document.getText();
   const results = [];
   let match;
-  while ((match = CSS_TEMPLATE_REGEX.exec(text))) {
+  while ((match = CSS_IN_JS_REGEX.exec(text))) {
     const offset = match.index;
     const line = document.positionAt(offset).line;
     results.push(line);
