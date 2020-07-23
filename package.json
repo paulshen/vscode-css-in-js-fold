@@ -13,6 +13,10 @@
     "onCommand:css-in-js-fold.foldAll",
     "onCommand:css-in-js-fold.unfoldAll"
   ],
+  "repository": {
+		"url": "https://github.com/paulshen/vscode-css-in-js-fold",
+		"type": "git"
+	},
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -23,18 +27,6 @@
       {
         "command": "css-in-js-fold.unfoldAll",
         "title": "CSS in JS: Unfold All"
-      }
-    ],
-    "keybindings": [
-      {
-        "command": "css-in-js-fold.foldAll",
-        "key": "cmd+k cmd+a",
-        "when": "editorTextFocus"
-      },
-      {
-        "command": "css-in-js-fold.unfoldAll",
-        "key": "cmd+k cmd+z",
-        "when": "editorTextFocus"
       }
     ]
   },
